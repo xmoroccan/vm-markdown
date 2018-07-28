@@ -4,6 +4,7 @@
                     :menuBorder="themeValue.menuBorder"
                     :menuColor="themeValue.menuColor"
                     :hoverColor="themeValue.hoverColor"
+                    :toggleZoom="toggleZoom"
                     @textChange="updateHtmlString"
                   >
     </VmMarkdownMenu>
@@ -150,7 +151,11 @@ export default {
     defaultText:{
       type: String,
       default: ''
-    }
+    },
+    toggleZoom: {
+      type: Boolean,
+      default: true
+    },
   },
   data: function () {
     return {
