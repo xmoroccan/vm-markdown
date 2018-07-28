@@ -38,9 +38,9 @@
         </VmMarkdownTable>
       </VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-image" 
-                        @click.native="insertText('![Logo](https://github.com/luosijie/Front-end-Blog/blob/master/img/logo_vmmarkdown_name.png?raw=true)\n')">
+                        @click.native="insertText('![image-alternative-text](image-url-here)\n')">
       </VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-link" @click.native="insertText('[JesseLuo](https://github.com/luosijie)')"></VmMarkdownButton>
+      <VmMarkdownButton icon="iconfont icon-link" @click.native="insertText('[Link-title](url-here)')"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-line" @click.native="insertText('***\n')"></VmMarkdownButton>
     </div>
     <div class="vm-markdown-layout">
