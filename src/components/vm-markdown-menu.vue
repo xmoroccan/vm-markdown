@@ -47,7 +47,7 @@
       <VmMarkdownButton icon="iconfont icon-layout-default" layout="default"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-layout-right" layout="right"></VmMarkdownButton>
       <VmMarkdownButton icon="iconfont icon-layout-left" layout="left"></VmMarkdownButton>
-      <VmMarkdownButton icon="iconfont icon-layout-zoom" layout="zoom"></VmMarkdownButton>
+      <VmMarkdownButton v-if="toggleZoom" icon="iconfont icon-layout-zoom" layout="zoom"></VmMarkdownButton>
     </div>
   </div>
 </template>
@@ -118,7 +118,12 @@ export default {
     hoverColor: {
       type: String,
       default:'#232323'
-    }
+    },
+    toggleZoom: {
+      type: Boolean,
+      default: true
+    },
+
   },
   computed: {
     filterColor: function(){
