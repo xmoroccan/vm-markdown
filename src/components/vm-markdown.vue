@@ -152,6 +152,10 @@ export default {
       type: String,
       default: ''
     },
+    value:{
+      type: String,
+      default: ''
+    },
     toggleZoom: {
       type: Boolean,
       default: true
@@ -159,7 +163,7 @@ export default {
   },
   data: function () {
     return {
-      markdString: '',
+      markdString: this.value,
       htmlString: ''
     }
   },
@@ -287,8 +291,8 @@ export default {
       }
     },
     getHtml () {
-      let html = document.querySelector('.vm-markdown-html')
-      this.$emit('gethtml', html.innerHTML)
+      //let html = document.querySelector('.vm-markdown-html')
+      this.$emit('input', this.markdString);
     }
   },
   watch: {
@@ -307,12 +311,12 @@ export default {
 
       setTimeout(()=>{
         this.parseHtml()
-        this.getHtml()
+        this.$emit('input', this.markdString);
       },0)
     }
   },
   mounted () {
-    this.markdString = this.defaultText
+    this.markdString = this.value
     this.layoutControl()
   }
 }
